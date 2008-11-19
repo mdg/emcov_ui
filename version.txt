@@ -1,0 +1,8 @@
+
+version 1.1.0
+now send screen output to files called emcov_output.txt and addres_output.txt
+allow negative MVI
+
+
+version 1.0.1
+Changed the copyright info on the about box to include emcov232 program.

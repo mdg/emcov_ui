@@ -1,0 +1,289 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\emcov_ui.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\emcov_ui.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 275, 118
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "about emcov_ui"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "emcov_ui Version 1.1.0",IDC_STATIC,40,10,79,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2002",IDC_STATIC,40,23,119,8
+    DEFPUSHBUTTON   "OK",IDOK,218,7,50,14,WS_GROUP
+    LTEXT           "Built for John Graham by Matt Graham (mdg149@yahoo.com)",
+                    IDC_STATIC,40,36,194,8
+    GROUPBOX        "For EMCOV version 2.32",IDC_STATIC,40,49,206,62
+    LTEXT           "EM Algorithm for Covariance Matrices, with embedded utility",
+                    IDC_STATIC,49,62,188,8
+    LTEXT           "for single imputation (with error) from EM parameters.",
+                    IDC_STATIC,49,73,164,8
+    LTEXT           "Program written by John Graham && Scott Hofer",
+                    IDC_STATIC,49,84,147,8
+    LTEXT           "© 1993, 1995, 2002",IDC_STATIC,49,95,65,8
+END
+
+IDD_EMCOV_UI_DIALOG DIALOGEX 0, 0, 214, 246
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "EMCOV"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_N_FIELD,15,20,33,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_K_FIELD,87,20,23,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EMCOV_FILE,15,65,135,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_EMCOV_BROWSE,162,65,39,14
+    EDITTEXT        IDC_MAX_PATTERN_FIELD,148,93,36,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_MVI_FIELD,148,112,36,14,ES_AUTOHSCROLL
+    CONTROL         "Listwise",IDC_LISTWISE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,142,41,10
+    CONTROL         "Pairwise",IDC_PAIRWISE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,112,142,42,10
+    EDITTEXT        IDC_MAX_ITER,148,168,36,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CONVERGE_FIELD,148,187,36,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         ".PTN",IDC_PTN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,
+                    222,33,10
+    CONTROL         ".DAT",IDC_DAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,81,
+                    222,33,10
+    CONTROL         ".RES",IDC_RES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,
+                    222,33,10
+    DEFPUSHBUTTON   "&Run",IDC_RUN,157,7,50,14
+    PUSHBUTTON      "E&xit",IDCANCEL,157,30,50,14
+    GROUPBOX        "N",IDC_STATIC,7,7,49,37
+    GROUPBOX        "K",IDC_STATIC,79,7,38,37
+    GROUPBOX        "EMCOV File",IDC_STATIC,7,52,200,35
+    LTEXT           "Maximum # of allowable missing patters:",IDC_STATIC,13,
+                    96,126,8
+    LTEXT           "Missing Value Indicator:",IDC_STATIC,13,115,76,8
+    LTEXT           "Maximum number of iterations:",IDC_STATIC,13,171,96,8
+    LTEXT           "Convergence Criterion:",IDC_STATIC,13,190,73,8
+    GROUPBOX        "Output",IDC_STATIC,7,209,200,29
+    GROUPBOX        "Starting Values for Covariance Matrix",IDC_STATIC,7,130,
+                    200,29
+END
+
+IDD_CONFIG DIALOGEX 0, 0, 242, 60
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Configure"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,39,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,73,39,50,14
+    LTEXT           "Emcov Path",IDC_STATIC,7,7,40,8
+    EDITTEXT        IDC_EMCOV_PATH,7,18,169,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "&Browse",IDC_SET_PATH,185,18,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Written for John Graham by Matt Graham\0"
+            VALUE "FileDescription", "emcov_ui Application\0"
+            VALUE "FileVersion", "1.1.0\0"
+            VALUE "InternalName", "emcov_ui\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "emcov_ui.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "EMCOV\0"
+            VALUE "ProductVersion", "2.32\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 268
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_EMCOV_UI_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 235
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_BUTTON32771
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR1            BITMAP  DISCARDABLE     "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About emcov_ui..."
+    IDS_CONFIGURE           "&Configure"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\emcov_ui.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
